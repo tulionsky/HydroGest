@@ -11731,3 +11731,66 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+
+/* Dark Mode Variables */
+
+:root[data-theme="dark"] {
+  --bs-body-bg: #1a1d21;
+  --bs-body-color: #e9ecef;
+  --bs-border-color: #3a3f44;
+  --bs-card-bg: #23272b;
+  --bs-card-border-color: #3a3f44;
+  --bs-card-cap-bg: #2c3034;
+  --bs-table-color: #e9ecef;
+  --bs-table-border-color: #3a3f44;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.03);
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--bs-card-bg);
+  border-color: var(--bs-card-border-color);
+  color: var(--bs-body-color);
+}
+
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer {
+  background-color: var(--bs-card-cap-bg);
+  border-color: var(--bs-card-border-color);
+}
+
+[data-theme="dark"] #layoutSidenav_content {
+  background-color: var(--bs-body-bg);
+}
+
+[data-theme="dark"] .table {
+  color: var(--bs-table-color);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: #2c3034;
+  color: var(--bs-body-color);
+  border-color: var(--bs-border-color);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #8a8f94;
+}
+
+[data-theme="dark"] .breadcrumb-item.active {
+  color: #adb5bd;
+}
+
+[data-theme="dark"] .text-muted {
+  color: #adb5bd !important;
+}
+
+#themeToggle {
+  cursor: pointer;
+}

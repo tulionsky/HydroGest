@@ -24,4 +24,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
       );
     });
   }
+
+//PARCIAL 2 MEJORA #1 
+// Modo Oscuro
+
+  const root = document.documentElement;
+  const themeToggle = document.body.querySelector("#themeToggle");
+  const themeIcon = document.body.querySelector("#themeIcon");
+
+  const applyTheme = (theme) => {
+    root.setAttribute("data-theme", theme);
+    if (themeIcon) {
+      themeIcon.classList.toggle("fa-moon", theme === "light");
+      themeIcon.classList.toggle("fa-sun", theme === "dark");
+    }
+  };
+
+  const savedTheme = localStorage.getItem("hidrogest|theme") || "light";
+  applyTheme(savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      const current = root.getAttribute("data-theme") || "light";
+      const next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem("hidrogest|theme", next);
+    });
+  }
 });
