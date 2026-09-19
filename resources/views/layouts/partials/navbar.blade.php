@@ -11,8 +11,7 @@
         </div>
     </form>
 
-    /* PARCIAL 2 MEJORA #1 */
-    /* Modo Oscuro */
+    {{-- Parcial 2 Mejora #1: Botón para alternar modo claro/oscuro --}}
     <!-- Navbar-->
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
         <li class="nav-item">
